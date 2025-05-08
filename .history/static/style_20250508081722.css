@@ -182,8 +182,7 @@ body {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.2);
-    transition: all 0.3s ease, box-shadow 0.4s ease, border-left 0.4s ease;
-    animation: fadeIn 0.8s ease-out;
+    transition: all 0.3s ease;
 }
 
 .container:hover {
@@ -213,7 +212,7 @@ p {
     background-color: #f9f9f9;
     border-radius: 10px;
     border-left: 4px solid #26d0ce;
-    transition: all 0.3s ease, box-shadow 0.4s ease, border-left 0.4s ease;
+    transition: all 0.3s ease;
 }
 
 .form-section:hover {
@@ -246,18 +245,13 @@ p {
     background-color: white;
     font-size: 1rem;
     color: #555;
-    transition: all 0.3s ease, transform 0.2s ease;
+    transition: all 0.3s;
 }
 
 .question select:focus {
     outline: none;
     border-color: #26d0ce;
     box-shadow: 0 0 0 2px rgba(38, 208, 206, 0.2);
-}
-
-.question select:hover {
-    border-color: #26d0ce;
-    transform: translateY(-2px);
 }
 
 .submit-container {
@@ -451,83 +445,6 @@ p {
 select.error {
     border-color: #f44336;
     background-color: rgba(244, 67, 54, 0.05);
-}
-
-/* Form Hover and Animation Effects */
-.form-section.answered {
-    border-left: 4px solid #4caf50;
-    box-shadow: 0 3px 15px rgba(76, 175, 80, 0.1);
-}
-
-.question select.selected {
-    border-color: #26d0ce;
-    box-shadow: 0 0 10px rgba(38, 208, 206, 0.3);
-    animation: pulse-select 0.5s ease;
-}
-
-@keyframes pulse-select {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.02);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
-
-/* Enhanced Button Effects */
-.submit-btn, .btn-primary, .btn-secondary {
-    position: relative;
-    overflow: hidden;
-}
-
-.submit-btn:before, .btn-primary:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-    transition: left 0.7s ease;
-}
-
-.submit-btn:hover:before, .btn-primary:hover:before {
-    left: 100%;
-}
-
-/* Page Transition Effect */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Print Styles */
-@media print {
-    .animated-background, 
-    .social-icons, 
-    .animated-waves,
-    .action-buttons {
-        display: none !important;
-    }
-    
-    .container {
-        box-shadow: none;
-        margin: 0;
-        padding: 10px;
-    }
-    
-    .result-card {
-        break-inside: avoid;
-    }
 }
 
 /* Responsive Styles */
